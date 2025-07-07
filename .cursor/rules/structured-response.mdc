@@ -1,0 +1,12 @@
+---
+description: Задает строгий формат для всех ответов AI.
+globs: ["**/*"]
+alwaysApply: true
+---
+Structure ALL your development-related responses using the following format:
+
+1.  **Plan:** A brief confirmation of the task and your plan of action.
+2.  **Tests (if applicable):** Outline the tests you will write or modify.
+3.  **Code:** The code block(s) with your solution.
+4.  **Explanation:** A short description of your code and the reasoning behind your decisions.
+5.  **Documentation Check:** State what needs to be updated in `README.md` or confirm no update is needed.

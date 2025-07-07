@@ -1,0 +1,9 @@
+---
+description: Требует соблюдения PEP 8, строгой типизации и осмысленных комментариев.
+globs: ["**/*.py"]
+alwaysApply: true
+---
+All Python code you write or edit MUST strictly adhere to the PEP 8 style guide.
+
+- Use strict Python type hints (from the `typing` module) for all function signatures and variables.
+- Add clear, concise comments to explain the "why" behind complex or non-obvious blocks of code, not just the "what".

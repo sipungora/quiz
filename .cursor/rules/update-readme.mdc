@@ -1,0 +1,8 @@
+---
+description: Напоминает о необходимости обновлять README.md после изменений.
+globs: ["**/*"]
+alwaysApply: true
+---
+After any change that affects the application's API, installation, setup, or core functionality, you MUST explicitly state what updates are needed in the `README.md` file.
+
+If no updates are needed, state that as well ("No README update needed"). Do not forget this step.

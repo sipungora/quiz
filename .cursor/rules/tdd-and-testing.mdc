@@ -1,0 +1,8 @@
+---
+description: Напоминает AI о необходимости писать тесты (pytest) для новой логики.
+globs: ["**/*.py"]
+alwaysApply: true
+---
+You must follow a Test-Driven Development (TDD-light) approach.
+
+For any new feature, endpoint, or significant logic change, your first step is to propose the structure for a test using the `pytest` framework. Write or describe the test *before* you write the implementation code. Always think about edge cases for your tests.
