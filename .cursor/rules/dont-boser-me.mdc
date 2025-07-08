@@ -1,5 +1,29 @@
 ---
-description:
-globs:
-alwaysApply: false
+description: Enforce auto-checking behavior instead of suggesting manual verification.
+globs: ["**/*.py"]
+alwaysApply: true
 ---
+
+## ✅ Assertive Auto-Checking Rules for Cursor
+
+- Do **not** write phrases like **"make sure"**, **"please verify"**, or **"you should check"**.
+- If something needs to be verified (e.g. existence of an endpoint, file, key, or response format), **write code that performs the check**.
+- If the check fails, **raise a clear error or log a warning**, instead of asking the user to do it manually.
+- Prefer actionable code over abstract suggestions. The goal is to automate, not to delegate.
+- Only use imperative verbs when giving recommendations to the user, and only if the task **cannot** be done automatically.
+- If you suggest a manual step, also offer the code to automate it whenever possible.
+
+## 🔍 Examples
+
+### ❌ Avoid this:
+> Make sure your backend exposes `/generate-questions` and returns the correct format.
+
+### ✅ Do this instead:
+```python
+import requests
+
+try:
+    response = requests.get("http://localhost:8000/generate-questions")
+    response.raise_for_status()
+except requests.exceptions.RequestException as e:
+    raise RuntimeError("Could not reach /generate-questions endpoint: " + str(e))
